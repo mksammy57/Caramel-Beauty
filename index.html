@@ -1,0 +1,2946 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARAMEL BEAUTY — Maroquinerie & Accessoires d'Élégance au Cameroun</title>
+  <meta name="description" content="Découvrez CARAMEL BEAUTY : portefeuilles masculins raffinés, sacs à main et maroquinerie au Cameroun. Commandez directement via nos lignes WhatsApp officielles.">
+  <meta property="og:title" content="CARAMEL BEAUTY — L'élégance se porte au quotidien">
+  <meta property="og:description" content="Portefeuilles pour hommes, sacs à main et maroquinerie de qualité au Cameroun. Commandes WhatsApp directes.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Polices Google : Playfair Display (luxe / maroquinerie) & Plus Jakarta Sans (ergonomie mobile) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. VARIABLES ET THÈME CHROMATIQUE CARAMEL BEAUTY
+       ========================================================================== */
+    :root {
+      --primary-chocolate: #2b170c;     /* Brun chocolat profond */
+      --secondary-chocolate: #3d2314;   /* Chocolat soutenu */
+      --caramel-accent: #b87333;        /* Cuivre caramel chaud */
+      --caramel-light: #d49b6a;         /* Caramel doré doux */
+      --caramel-hover: #9c5e26;
+      --cream-bg: #fcf9f5;              /* Fond crème éclatant */
+      --cream-card: #f5ede4;            /* Ivoire / Cartes */
+      --gold-detail: #c5a059;           /* Doré subtil */
+      --gold-light: #f3e9d2;
+      --text-dark: #1f1a17;             /* Noir doux / texte principal */
+      --text-muted: #6b5c54;           /* Texte secondaire chaud */
+      --border-color: #e5d9ce;
+      --white: #ffffff;
+      --success: #2e7d32;
+      --warning: #ed6c02;
+      --danger: #d32f2f;
+      --whatsapp-green: #25d366;
+      --whatsapp-dark: #128c7e;
+      
+      --shadow-sm: 0 2px 10px rgba(43, 23, 12, 0.05);
+      --shadow-md: 0 6px 22px rgba(43, 23, 12, 0.08);
+      --shadow-lg: 0 16px 40px rgba(43, 23, 12, 0.14);
+      
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--cream-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* ==========================================================================
+       2. BARRE D'ANNONCE & EN-TÊTE
+       ========================================================================== */
+    .top-announcement {
+      background-color: var(--primary-chocolate);
+      color: var(--gold-light);
+      font-size: 0.82rem;
+      padding: 0.55rem 1rem;
+      text-align: center;
+      letter-spacing: 0.4px;
+      border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+    }
+
+    .navbar {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--primary-chocolate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-name span {
+      color: var(--caramel-accent);
+    }
+
+    .brand-tagline {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--text-muted);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 0.4rem 0;
+      position: relative;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--caramel-accent);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--caramel-accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .btn-icon {
+      background: transparent;
+      padding: 0.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-chocolate);
+      position: relative;
+    }
+
+    .btn-icon:hover {
+      background-color: var(--cream-card);
+    }
+
+    .cart-badge {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      background: var(--caramel-accent);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-admin-pill {
+      font-size: 0.75rem;
+      padding: 0.45rem 0.85rem;
+      background: var(--cream-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      color: var(--primary-chocolate);
+      font-weight: 600;
+    }
+
+    .btn-admin-pill:hover {
+      background: var(--primary-chocolate);
+      color: var(--white);
+    }
+
+    .menu-burger-btn {
+      display: none;
+      background: none;
+      font-size: 1.5rem;
+      color: var(--primary-chocolate);
+    }
+
+    /* ==========================================================================
+       3. BANNIÈRE HERO PRINCIPALE
+       ========================================================================== */
+    .hero-section {
+      background: linear-gradient(135deg, #25140a 0%, #3d2314 55%, #180d07 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      padding: 4.5rem 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.35rem 0.9rem;
+      background: rgba(197, 160, 89, 0.15);
+      border: 1px solid rgba(197, 160, 89, 0.35);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 30px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      line-height: 1.18;
+      margin-bottom: 1.2rem;
+      color: #fff;
+    }
+
+    .hero-title em {
+      color: var(--caramel-light);
+      font-style: italic;
+    }
+
+    .hero-text {
+      color: #dfd4cb;
+      font-size: 1.05rem;
+      max-width: 530px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.6rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-caramel {
+      background-color: var(--caramel-accent);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(184, 115, 51, 0.35);
+    }
+
+    .btn-caramel:hover {
+      background-color: var(--caramel-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp-green);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--whatsapp-dark);
+      transform: translateY(-2px);
+    }
+
+    .hero-visual-card {
+      position: relative;
+      background: radial-gradient(circle, rgba(184, 115, 51, 0.15) 0%, rgba(0,0,0,0.5) 80%);
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .leather-mockup-wrapper {
+      position: relative;
+      width: 100%;
+      height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Stylisation visuelle cuir noir & brun chocolat */
+    .wallet-card-back {
+      position: absolute;
+      width: 240px;
+      height: 170px;
+      background: linear-gradient(145deg, #181818, #0a0a0a);
+      border-radius: 12px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.6);
+      transform: rotate(-9deg) translate(-25px, -15px);
+      border: 1px dashed rgba(255,255,255,0.25);
+    }
+
+    .wallet-card-front {
+      position: absolute;
+      width: 255px;
+      height: 180px;
+      background: linear-gradient(135deg, #532d18 0%, #301709 100%);
+      border-radius: 12px;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.7);
+      transform: rotate(5deg) translate(15px, 15px);
+      border: 1px dashed rgba(197, 160, 89, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.25rem;
+    }
+
+    .wallet-strap {
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 34px;
+      background: #2b170c;
+      border-radius: 0 17px 17px 0;
+      border-top: 1px dashed rgba(197, 160, 89, 0.4);
+      border-right: 1px dashed rgba(197, 160, 89, 0.4);
+      border-bottom: 1px dashed rgba(197, 160, 89, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 6px;
+    }
+
+    .metal-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffe699, #997300);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .wallet-badge-txt {
+      font-family: var(--font-heading);
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      letter-spacing: 1.2px;
+    }
+
+    .hero-features-bar {
+      background: var(--cream-card);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.25rem 0;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .feature-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(184, 115, 51, 0.15);
+      color: var(--caramel-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .feature-content h4 {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-chocolate);
+    }
+
+    .feature-content p {
+      font-size: 0.77rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       4. SECTIONS & TITRES
+       ========================================================================== */
+    .section-padding {
+      padding: 4.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--caramel-accent);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.15rem;
+      color: var(--primary-chocolate);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* ==========================================================================
+       5. CATALOGUE & FILTRES
+       ========================================================================== */
+    .catalog-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      background: var(--white);
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.7rem 1rem 0.7rem 2.4rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      background: var(--cream-bg);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill-btn {
+      padding: 0.45rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      background: var(--cream-card);
+      color: var(--text-dark);
+      border: 1px solid var(--border-color);
+    }
+
+    .pill-btn.active, .pill-btn:hover {
+      background: var(--primary-chocolate);
+      color: var(--white);
+      border-color: var(--primary-chocolate);
+    }
+
+    .sort-select {
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      background: var(--white);
+      color: var(--text-dark);
+    }
+
+    /* ==========================================================================
+       6. CARTES PRODUITS
+       ========================================================================== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .product-badge-flag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      background: var(--primary-chocolate);
+      color: var(--gold-light);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+    }
+
+    .product-thumb-container {
+      width: 100%;
+      height: 240px;
+      background: #f0e7df;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-img {
+      transform: scale(1.05);
+    }
+
+    .product-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-category-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--caramel-accent);
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .product-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--primary-chocolate);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .product-brand-ref {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .color-swatches {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .swatch {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,0.15);
+      display: inline-block;
+    }
+
+    .swatch-noir { background-color: #1a1a1a; }
+    .swatch-chocolat { background-color: #3b1d0d; }
+    .swatch-brun { background-color: #7b4a2d; }
+    .swatch-caramel { background-color: #b87333; }
+    .swatch-creme { background-color: #e8dccb; }
+
+    .product-price-row {
+      margin-top: auto;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+      margin-bottom: 1rem;
+    }
+
+    .price-val {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-chocolate);
+    }
+
+    .stock-indicator {
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .stock-in { color: var(--success); }
+    .stock-out { color: var(--danger); }
+    .stock-ask { color: var(--warning); }
+
+    .product-action-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .btn-detail {
+      background: var(--cream-card);
+      color: var(--primary-chocolate);
+      font-size: 0.82rem;
+      padding: 0.6rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .btn-detail:hover {
+      background: var(--border-color);
+    }
+
+    .btn-card-order {
+      background: var(--caramel-accent);
+      color: var(--white);
+      font-size: 0.82rem;
+      padding: 0.6rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .btn-card-order:hover {
+      background: var(--caramel-hover);
+    }
+
+    /* ==========================================================================
+       7. SECTION COMMENT COMMANDER & LIVRAISON CAMEROUN
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .step-card {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-num {
+      width: 38px;
+      height: 38px;
+      background: var(--caramel-accent);
+      color: var(--white);
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .step-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--primary-chocolate);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .delivery-box {
+      background: linear-gradient(135deg, var(--cream-card) 0%, #ebe0d3 100%);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .delivery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .delivery-title {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      color: var(--primary-chocolate);
+      margin-bottom: 1rem;
+    }
+
+    .delivery-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .delivery-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+      margin-bottom: 0.85rem;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+
+    .delivery-check {
+      color: var(--caramel-accent);
+      font-weight: bold;
+    }
+
+    /* ==========================================================================
+       8. MODALE SÉLECTEUR DE CONSEILLER WHATSAPP (2 LIGNES DU CAMEROUN)
+       ========================================================================== */
+    .wa-picker-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 9, 5, 0.75);
+      z-index: 1200;
+      overflow-y: auto;
+      padding: 1.5rem;
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wa-picker-backdrop.show {
+      display: flex;
+    }
+
+    .wa-picker-dialog {
+      background: var(--white);
+      max-width: 480px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalFadeIn 0.25s ease;
+      border: 1px solid var(--border-color);
+    }
+
+    .wa-picker-header {
+      background: linear-gradient(135deg, var(--primary-chocolate) 0%, #3e2010 100%);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .wa-picker-header h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .wa-picker-header p {
+      font-size: 0.82rem;
+      color: var(--gold-light);
+    }
+
+    .wa-picker-body {
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .wa-line-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 1.25rem;
+      border-radius: var(--radius-md);
+      border: 2px solid var(--border-color);
+      background: var(--cream-bg);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: left;
+      width: 100%;
+    }
+
+    .wa-line-card:hover {
+      border-color: var(--whatsapp-green);
+      background: #f1fcf5;
+      transform: translateY(-2px);
+    }
+
+    .wa-line-card.primary {
+      border-color: rgba(37, 211, 102, 0.5);
+    }
+
+    .wa-line-info h4 {
+      font-size: 0.95rem;
+      color: var(--primary-chocolate);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wa-badge-pill {
+      font-size: 0.65rem;
+      background: var(--caramel-accent);
+      color: #fff;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .wa-line-phone {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--whatsapp-dark);
+      margin: 3px 0 2px;
+      letter-spacing: 0.5px;
+    }
+
+    .wa-line-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .wa-line-action-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--whatsapp-green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(37, 211, 102, 0.35);
+    }
+
+    /* ==========================================================================
+       9. MODALE PRODUIT DÉTAILLÉ
+       ========================================================================== */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 9, 5, 0.75);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 1.5rem;
+      backdrop-filter: blur(4px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-backdrop.show {
+      display: flex;
+    }
+
+    .modal-dialog {
+      background: var(--white);
+      max-width: 850px;
+      width: 100%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--cream-card);
+      border: 1px solid var(--border-color);
+      font-size: 1.25rem;
+      color: var(--primary-chocolate);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--primary-chocolate);
+      color: var(--white);
+    }
+
+    .modal-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-gallery {
+      background: #f7efe6;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--border-color);
+    }
+
+    .modal-main-img-box {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: #fff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .modal-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-details {
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-cat {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--caramel-accent);
+      font-weight: 600;
+    }
+
+    .modal-title {
+      font-family: var(--font-heading);
+      font-size: 1.7rem;
+      color: var(--primary-chocolate);
+      margin: 0.35rem 0 0.5rem;
+      line-height: 1.2;
+    }
+
+    .modal-price {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--primary-chocolate);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .modal-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-chocolate);
+      margin-bottom: 0.4rem;
+    }
+
+    .color-options-radio {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .color-option-btn {
+      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      background: var(--white);
+      cursor: pointer;
+    }
+
+    .color-option-btn.selected {
+      border-color: var(--caramel-accent);
+      background: rgba(184, 115, 51, 0.1);
+      color: var(--primary-chocolate);
+      font-weight: 600;
+    }
+
+    .qty-control {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .qty-btn {
+      padding: 0.45rem 0.9rem;
+      background: var(--cream-card);
+      font-size: 1rem;
+    }
+
+    .qty-input {
+      width: 48px;
+      text-align: center;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .delivery-pref-box {
+      background: var(--cream-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .delivery-pref-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    .input-sm {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      font-size: 0.85rem;
+      background: var(--white);
+    }
+
+    .modal-actions-bar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    /* ==========================================================================
+       10. TIROIR PANIER MULTI-ARTICLES
+       ========================================================================== */
+    .cart-drawer-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1050;
+      backdrop-filter: blur(2px);
+    }
+
+    .cart-drawer-backdrop.show {
+      display: block;
+    }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 420px;
+      height: 100%;
+      background: var(--white);
+      z-index: 1100;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .cart-drawer-header {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--cream-card);
+    }
+
+    .cart-drawer-header h3 {
+      font-family: var(--font-heading);
+      color: var(--primary-chocolate);
+      font-size: 1.2rem;
+    }
+
+    .cart-drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 0.85rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .cart-item-img {
+      width: 65px;
+      height: 65px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      background: #ede3d8;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-chocolate);
+    }
+
+    .cart-item-variant {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 2px 0 6px;
+    }
+
+    .cart-item-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--caramel-accent);
+    }
+
+    .cart-item-remove {
+      background: none;
+      color: var(--danger);
+      font-size: 0.75rem;
+      padding: 2px;
+      cursor: pointer;
+    }
+
+    .cart-drawer-footer {
+      padding: 1.25rem;
+      background: var(--cream-bg);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-chocolate);
+      margin-bottom: 1rem;
+    }
+
+    /* ==========================================================================
+       11. TABLEAU DE BORD ADMINISTRATEUR (GESTION GÉRANTE)
+       ========================================================================== */
+    .admin-section {
+      background: #f4eee7;
+      padding: 4rem 0;
+      border-top: 2px solid var(--caramel-accent);
+    }
+
+    .admin-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .admin-header {
+      background: var(--primary-chocolate);
+      color: var(--white);
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .admin-header h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+    }
+
+    .admin-tabs {
+      display: flex;
+      background: var(--cream-card);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .admin-tab-btn {
+      padding: 0.85rem 1.5rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: transparent;
+      color: var(--text-muted);
+      border-bottom: 3px solid transparent;
+    }
+
+    .admin-tab-btn.active {
+      color: var(--caramel-accent);
+      border-bottom-color: var(--caramel-accent);
+      background: var(--white);
+    }
+
+    .admin-content-pane {
+      padding: 2rem;
+    }
+
+    .admin-grid-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .admin-input, .admin-textarea, .admin-select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: inherit;
+    }
+
+    .admin-textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.88rem;
+    }
+
+    .admin-table th, .admin-table td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .admin-table th {
+      background: var(--cream-card);
+      color: var(--primary-chocolate);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       12. FAQ & FOOTER
+       ========================================================================== */
+    .faq-accordion {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.8rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 1.1rem 1.4rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--primary-chocolate);
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background: var(--cream-bg);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 1.4rem 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .site-footer {
+      background: var(--primary-chocolate);
+      color: #e5ded7;
+      padding: 4.5rem 0 2rem;
+      border-top: 3px solid var(--caramel-accent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: #c4b5a8;
+      max-width: 320px;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-heading {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links a {
+      color: #c4b5a8;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--caramel-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #9c8e82;
+    }
+
+    /* Bouton Flottant WhatsApp */
+    .floating-whatsapp-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--whatsapp-green);
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+      z-index: 900;
+      transition: transform 0.25s ease;
+    }
+
+    .floating-whatsapp-btn:hover {
+      transform: scale(1.08);
+      background: var(--whatsapp-dark);
+    }
+
+    .floating-whatsapp-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================================
+       13. RESPONSIVE MOBILE
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-text {
+        margin: 0 auto 2rem;
+      }
+      .hero-cta-group {
+        justify-content: center;
+      }
+      .features-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .delivery-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-body {
+        grid-template-columns: 1fr;
+      }
+      .modal-gallery {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-burger-btn {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-md);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .features-list {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .admin-grid-form {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       BARRE D'ANNONCE EN-TÊTE
+       ========================================================================== -->
+  <div class="top-announcement" id="topAnnouncement">
+    ✨ Nouveautés Maroquinerie : Portefeuilles Baellerry & Accessoires au Cameroun. Commandes directes WhatsApp : +237 654 99 42 24 / +237 687 89 70 22 !
+  </div>
+
+  <!-- ==========================================================================
+       NAVIGATION
+       ========================================================================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#accueil" class="brand-logo">
+        <div class="brand-name">CARAMEL <span>BEAUTY</span></div>
+        <div class="brand-tagline">L'élégance au quotidien</div>
+      </a>
+
+      <ul class="nav-links" id="mainNav">
+        <li><a href="#accueil" class="active">Accueil</a></li>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#boutique" onclick="filterByCategory('portefeuilles-hommes')">Portefeuilles</a></li>
+        <li><a href="#comment-commander">Comment commander</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Bouton Panier -->
+        <button class="btn-icon" onclick="openCartDrawer()" title="Voir la sélection" aria-label="Panier">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Accès Tableau de bord Gérante -->
+        <button class="btn-admin-pill" onclick="toggleAdminSection()">
+          ⚙️ Gestion
+        </button>
+
+        <!-- Menu Hamburger Mobile -->
+        <button class="menu-burger-btn" onclick="toggleMobileNav()" aria-label="Ouvrir le menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION HERO
+       ========================================================================== -->
+  <section class="hero-section" id="accueil">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">Collection Cuir & Accessoires Cameroun</div>
+        <h1 class="hero-title">CARAMEL BEAUTY — <br><em>L'élégance se porte au quotidien.</em></h1>
+        <p class="hero-text">
+          Découvrez notre sélection soignée de portefeuilles pour hommes, sacs à main et maroquinerie pensée pour accompagner votre allure avec distinction et praticité.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#boutique" class="btn btn-caramel">
+            Découvrir la boutique
+          </a>
+          <button onclick="triggerWhatsAppSelector('general')" class="btn btn-whatsapp">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            Commander sur WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <!-- Visuel Inspiré des Photos Réelles (Finition cuir chocolat & noir) -->
+      <div class="hero-visual-card">
+        <div class="leather-mockup-wrapper">
+          <div class="wallet-card-back"></div>
+          <div class="wallet-card-front">
+            <div class="wallet-badge-txt">CARAMEL BEAUTY</div>
+            <div style="font-size: 0.65rem; color: #d49b6a; letter-spacing: 2px;">EDITION CLASSIQUE</div>
+            <div class="wallet-strap">
+              <div class="metal-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BANDEAU ATOUTS / CONFIANCE
+       ========================================================================== -->
+  <div class="hero-features-bar">
+    <div class="container">
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">✨</div>
+          <div class="feature-content">
+            <h4>Finitions Soignées</h4>
+            <p>Coutures apparentes et cuir de qualité</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🇨🇲</div>
+          <div class="feature-content">
+            <h4>Livraison Cameroun</h4>
+            <p>Douala, Yaoundé et toutes les villes</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <div class="feature-content">
+            <h4>2 Lignes WhatsApp</h4>
+            <p>+237 654 99 42 24 / 687 89 70 22</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🤝</div>
+          <div class="feature-content">
+            <h4>Confirmation Directe</h4>
+            <p>Disponibilité et expédition confirmées</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SECTION BOUTIQUE & CATALOGUE
+       ========================================================================== */
+  -->
+  <section class="section-padding" id="boutique">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Notre Sélection</span>
+        <h2 class="section-title">Catalogue CARAMEL BEAUTY</h2>
+        <p class="section-desc">
+          Explorez nos portefeuilles masculins emblématiques, nos sacs à main et nos porte-monnaie.
+        </p>
+      </div>
+
+      <!-- Contrôles Catalogue (Recherche & Filtres) -->
+      <div class="catalog-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un modèle, couleur, référence..." oninput="handleSearch()">
+        </div>
+
+        <div class="filter-pills" id="categoryFilters">
+          <button class="pill-btn active" onclick="filterByCategory('all')">Tous les articles</button>
+          <button class="pill-btn" onclick="filterByCategory('portefeuilles-hommes')">Portefeuilles Hommes</button>
+          <button class="pill-btn" onclick="filterByCategory('portefeuilles-femmes')">Portefeuilles Femmes</button>
+          <button class="pill-btn" onclick="filterByCategory('sacs-a-main')">Sacs à main</button>
+          <button class="pill-btn" onclick="filterByCategory('porte-monnaie')">Porte-monnaie</button>
+           <button class="pill-btn" onclick="filterByCategory('Porte-Passport')">Porte-Passport</button>
+          <button class="pill-btn" onclick="filterByCategory('accessoires')">Accessoires</button>
+        </div>
+
+        <div>
+          <select id="sortSelect" class="sort-select" onchange="handleSort()">
+            <option value="default">Tri par défaut</option>
+            <option value="price-asc">Prix : croissant</option>
+            <option value="price-desc">Prix : décroissant</option>
+            <option value="name">Nom alphabétique</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Grille Produits Réels -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendu dynamique via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION "COMMENT COMMANDER ?"
+       ========================================================================== -->
+  <section class="section-padding" style="background-color: var(--white);" id="comment-commander">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Simplicité & Sécurité</span>
+        <h2 class="section-title">Comment commander chez CARAMEL BEAUTY ?</h2>
+        <p class="section-desc">Pas de paiement par carte forcé. Un accompagnement direct et transparent via nos 2 lignes WhatsApp.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Choisissez vos articles</h3>
+          <p>
+            Parcourez notre catalogue, sélectionnez votre couleur préférée (noir classique, marron chocolat, etc.) et cliquez sur « Commander ».
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Choisissez votre conseiller</h3>
+          <p>
+            Sélectionnez la ligne WhatsApp de votre choix (+237 654 99 42 24 ou +237 687 89 70 22). Votre message sera automatiquement pré-rempli avec l'article et votre adresse.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Confirmation & Réception</h3>
+          <p>
+            La responsable vérifie le stock réel en boutique et organise l'expédition sécurisée vers votre ville ou quartier au Cameroun.
+          </p>
+        </div>
+      </div>
+
+      <!-- Encadré Livraison Spécifique Cameroun -->
+      <div class="delivery-box">
+        <div class="delivery-grid">
+          <div>
+            <span class="section-subtitle">Expédition locale</span>
+            <h3 class="delivery-title">Livraison sur l'ensemble du Cameroun</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Que vous résidiez à Douala, Yaoundé, Bafoussam, Garoua, Bamenda, Kribi ou Limbé, votre colis est préparé et expédié selon la modalité convenue avec votre conseillère.
+            </p>
+            <ul class="delivery-list">
+              <li><span class="delivery-check">✓</span> <strong>Douala & Yaoundé :</strong> Livraison par coursier express à domicile ou en point relais.</li>
+              <li><span class="delivery-check">✓</span> <strong>Autres villes :</strong> Expédition par agence de voyage reconnue (Buca, Touristique, etc.).</li>
+              <li><span class="delivery-check">✓</span> <strong>Frais transparents :</strong> Précisés et validés avant l'envoi de votre colis.</li>
+            </ul>
+          </div>
+          <div style="background: var(--white); padding: 1.6rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+            <h4 style="font-family: var(--font-heading); color: var(--primary-chocolate); margin-bottom: 0.6rem;">Besoin d'un renseignement immédiat ?</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+              Nos conseillères sont disponibles sur nos deux lignes WhatsApp camerounaises officielles :
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+              <button onclick="directOpenWhatsApp('237654994224', 'general')" class="btn btn-whatsapp" style="font-size: 0.85rem; justify-content: center;">
+                Contacter Ligne 1 (+237 654 99 42 24)
+              </button>
+              <button onclick="directOpenWhatsApp('237687897022', 'general')" class="btn" style="font-size: 0.85rem; justify-content: center; background: var(--cream-card); color: var(--primary-chocolate); border: 1px solid var(--border-color);">
+                Contacter Ligne 2 (+237 687 89 70 22)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION FAQ
+       ========================================================================== -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Aide & Conseils</span>
+        <h2 class="section-title">Questions fréquentes</h2>
+        <p class="section-desc">Tout ce qu'il faut savoir pour commander vos articles en toute confiance.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quel numéro WhatsApp dois-je privilégier pour commander ?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Nos deux lignes sont actives. Vous pouvez utiliser indistinctement le <strong>+237 654 99 42 24</strong> (commandes & conseils) ou le <strong>+237 687 89 70 22</strong> (service client & livraisons). Si une ligne est occupée, l'autre prend le relais !
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Quels sont les moyens de paiement acceptés au Cameroun ?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Nous acceptons les paiements via <strong>Orange Money</strong>, <strong>MTN Mobile Money</strong>, ainsi que le paiement en espèces à la livraison pour certaines zones de Yaoundé et Douala.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Les produits sont-ils conformes aux photos du catalogue ?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Oui, nos photos mettent en avant nos modèles réels reçus en boutique (marques Baellerry et sélections CARAMEL BEAUTY), avec leurs coutures précises, languettes renforcées et finitions chocolat ou noir profond.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION À PROPOS & CONTACT
+       ========================================================================== -->
+  <section class="section-padding" style="background: var(--white);" id="contact">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+        <div>
+          <span class="section-subtitle">Identité de marque</span>
+          <h2 class="section-title">L'Esprit CARAMEL BEAUTY</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+            CARAMEL BEAUTY sélectionne des articles de maroquinerie durables et séduisants, pensés pour l'homme contemporain et la femme élégante au Cameroun.
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Des teintes riches de chocolat et de caramel aux noirs profonds, nous privilégions des accessoires bien finis qui valorisent votre allure au quotidien.
+          </p>
+          <div>
+            <a href="https://www.facebook.com/profile.php?id=100050820716280" target="_blank" rel="noopener" class="btn btn-outline-light" style="color: var(--primary-chocolate); border: 1px solid var(--border-color);">
+              Visiter notre page Facebook officielle
+            </a>
+          </div>
+        </div>
+
+        <!-- Coordonnées Officielles Cameroun -->
+        <div style="background: var(--cream-card); padding: 2.2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <h3 style="font-family: var(--font-heading); color: var(--primary-chocolate); margin-bottom: 1rem;">Nos Lignes WhatsApp Officielles</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Contactez notre équipe directement sur l'une de nos deux lignes dédiées au Cameroun :
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 0.8rem; margin-bottom: 1.5rem;">
+            <div style="padding: 0.8rem; background: var(--white); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--caramel-accent); font-weight: 700;">LIGNE PRINCIPALE 1</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-chocolate);">+237 654 99 42 24</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Commandes directes & conseils modèles</div>
+            </div>
+
+            <div style="padding: 0.8rem; background: var(--white); border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+              <div style="font-size: 0.75rem; color: var(--caramel-accent); font-weight: 700;">LIGNE CLIENTÈLE 2</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: var(--primary-chocolate);">+237 687 89 70 22</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Service client, suivi & livraisons</div>
+            </div>
+          </div>
+
+          <button onclick="triggerWhatsAppSelector('general')" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+            Discuter sur WhatsApp maintenant
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODALE SÉLECTEUR DE CONSEILLER WHATSAPP (2 NUMÉROS CAMEROUNAIS)
+       ========================================================================== -->
+  <div class="wa-picker-backdrop" id="waPickerModal" onclick="closeWaPickerOnBackdrop(event)">
+    <div class="wa-picker-dialog">
+      <div class="wa-picker-header">
+        <button class="modal-close-btn" onclick="closeWaPickerModal()" style="top:10px; right:10px; background: rgba(255,255,255,0.2); color:#fff; border:none;">✕</button>
+        <h3>Conseillers CARAMEL BEAUTY</h3>
+        <p>Sélectionnez votre ligne WhatsApp de contact</p>
+      </div>
+
+      <div class="wa-picker-body">
+        <!-- Ligne 1 -->
+        <div class="wa-line-card primary" onclick="confirmWaLineSelected('237654994224')">
+          <div class="wa-line-info">
+            <h4>Ligne WhatsApp 1 <span class="wa-badge-pill">Principal</span></h4>
+            <div class="wa-line-phone">+237 654 99 42 24</div>
+            <div class="wa-line-desc">Commandes immédiates & réservations</div>
+          </div>
+          <div class="wa-line-action-btn">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          </div>
+        </div>
+
+        <!-- Ligne 2 -->
+        <div class="wa-line-card" onclick="confirmWaLineSelected('237687897022')">
+          <div class="wa-line-info">
+            <h4>Ligne WhatsApp 2 <span class="wa-badge-pill" style="background:#4b382d;">Ligne 2</span></h4>
+            <div class="wa-line-phone">+237 687 89 70 22</div>
+            <div class="wa-line-desc">Suivi de livraison & assistance client</div>
+          </div>
+          <div class="wa-line-action-btn" style="background: var(--whatsapp-dark);">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODALE PRODUIT DÉTAILLÉ
+       ========================================================================== -->
+  <div class="modal-backdrop" id="productModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeProductModal()">✕</button>
+      <div class="modal-body">
+        <div class="modal-gallery">
+          <div class="modal-main-img-box">
+            <img id="modalImg" src="" alt="Détail du produit">
+          </div>
+          <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.6rem; text-align: center;">
+            Finition soignée, coutures apparentes et cuir sélectionné
+          </div>
+        </div>
+
+        <div class="modal-details">
+          <span class="modal-cat" id="modalCategory">Catégorie</span>
+          <h2 class="modal-title" id="modalTitle">Nom du produit</h2>
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.6rem;" id="modalRef">Réf: --</div>
+          <div class="modal-price" id="modalPrice">-- FCFA</div>
+          
+          <p class="modal-desc" id="modalDesc">
+            Description détaillée du produit.
+          </p>
+
+          <!-- Sélection de Variante / Couleur -->
+          <div class="form-group">
+            <label class="form-label">Couleur souhaitée :</label>
+            <div class="color-options-radio" id="modalColorOptions">
+              <!-- Rempli en JS -->
+            </div>
+          </div>
+
+          <!-- Sélection Quantité -->
+          <div class="form-group">
+            <label class="form-label">Quantité :</label>
+            <div class="qty-control">
+              <button class="qty-btn" type="button" onclick="adjustModalQty(-1)">-</button>
+              <input type="text" id="modalQtyInput" class="qty-input" value="1" readonly>
+              <button class="qty-btn" type="button" onclick="adjustModalQty(1)">+</button>
+            </div>
+          </div>
+
+          <!-- Informations de livraison au Cameroun -->
+          <div class="delivery-pref-box">
+            <label class="form-label" style="font-size: 0.78rem;">Votre destination de livraison au Cameroun :</label>
+            <div class="delivery-pref-grid">
+              <input type="text" id="clientCity" class="input-sm" placeholder="Ville (ex: Douala, Yaoundé)">
+              <input type="text" id="clientQuarter" class="input-sm" placeholder="Quartier / Repère">
+            </div>
+          </div>
+
+          <!-- Boutons de Commande & Panier -->
+          <div class="modal-actions-bar">
+            <button onclick="orderCurrentModalProductTrigger()" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              Commander sur WhatsApp
+            </button>
+            <div style="display: flex; gap: 0.5rem;">
+              <button onclick="addModalProductToCart()" class="btn" style="flex: 1; background: var(--cream-card); color: var(--primary-chocolate); font-size: 0.85rem;">
+                + Ajouter au panier
+              </button>
+              <button onclick="shareCurrentProduct()" class="btn" style="background: var(--white); border: 1px solid var(--border-color); padding: 0.6rem 0.8rem;" title="Partager">
+                🔗 Partager
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TIROIR PANIER MULTI-ARTICLES
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop" onclick="closeCartDrawer()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Votre Sélection d'articles</h3>
+      <button onclick="closeCartDrawer()" style="background:none; font-size: 1.25rem;">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cartItemsList">
+      <!-- Rempli en JS -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-total-row">
+        <span>Sous-total estimé :</span>
+        <span id="cartTotalSum">0 FCFA</span>
+      </div>
+      <div style="margin-bottom: 0.85rem;">
+        <input type="text" id="cartClientCity" class="input-sm" style="margin-bottom: 0.35rem;" placeholder="Votre Ville (ex: Yaoundé)">
+        <input type="text" id="cartClientQuarter" class="input-sm" placeholder="Votre Quartier (ex: Bastos, Akwa...)">
+      </div>
+      <button onclick="sendCartOrderTrigger()" class="btn btn-whatsapp" style="width: 100%; justify-content: center;">
+        Valider la commande groupée sur WhatsApp
+      </button>
+    </div>
+  </div>
+
+  <!-- BOUTON WHATSAPP FLOTTANT DIRECT -->
+  <a href="javascript:void(0)" onclick="triggerWhatsAppSelector('general')" class="floating-whatsapp-btn" title="Écrire à CARAMEL BEAUTY sur WhatsApp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- ==========================================================================
+       ESPACE ADMINISTRATEUR SÉCURISÉ (GÉRANTE)
+       ========================================================================== -->
+  <section class="admin-section" id="adminPanel" style="display: none;">
+    <div class="container">
+      <div class="admin-card">
+        <div class="admin-header">
+          <div>
+            <h2>Tableau de Bord Administrateur</h2>
+            <div style="font-size: 0.78rem; color: var(--gold-light);">CARAMEL BEAUTY — Gestion du Catalogue & Paramètres WhatsApp</div>
+          </div>
+          <button onclick="toggleAdminSection()" style="background: rgba(255,255,255,0.15); color: #fff; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.8rem;">
+            Fermer l'administration ✕
+          </button>
+        </div>
+
+        <div class="admin-tabs">
+          <button class="admin-tab-btn active" onclick="switchAdminTab('products-tab')">📦 Articles du Catalogue</button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('new-product-tab')">➕ Ajouter un Article</button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('settings-tab')">⚙️ Configuration des 2 Lignes WhatsApp</button>
+        </div>
+
+        <!-- Onglet 1 : Liste & Édition -->
+        <div id="products-tab" class="admin-content-pane">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h3>Articles existants (<span id="adminTotalProducts">0</span>)</h3>
+            <button class="btn btn-caramel" style="padding: 0.45rem 1rem; font-size: 0.82rem;" onclick="switchAdminTab('new-product-tab')">
+              + Ajouter un article
+            </button>
+          </div>
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Visuel</th>
+                  <th>Nom & Réf</th>
+                  <th>Catégorie</th>
+                  <th>Prix (FCFA)</th>
+                  <th>Stock</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminProductsTableBody">
+                <!-- Rempli en JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Onglet 2 : Ajout / Édition Produit -->
+        <div id="new-product-tab" class="admin-content-pane" style="display: none;">
+          <h3 id="formProductTitle" style="margin-bottom: 1.25rem;">Ajouter un nouvel article</h3>
+          <form id="productForm" onsubmit="handleProductSubmit(event)">
+            <input type="hidden" id="editProductId">
+            <div class="admin-grid-form">
+              <div>
+                <label class="form-label">Nom du produit *</label>
+                <input type="text" id="prodName" class="admin-input" required placeholder="Ex: Portefeuille classique à languette Baellerry">
+              </div>
+
+              <div>
+                <label class="form-label">Référence / Modèle</label>
+                <input type="text" id="prodRef" class="admin-input" placeholder="Ex: BL-L908-MC">
+              </div>
+
+              <div>
+                <label class="form-label">Catégorie *</label>
+                <select id="prodCategory" class="admin-select" required>
+                  <option value="portefeuilles-hommes">Portefeuilles Hommes</option>
+                  <option value="portefeuilles-femmes">Portefeuilles Femmes</option>
+                  <option value="sacs-a-main">Sacs à main</option>
+                  <option value="porte-monnaie">Porte-monnaie</option>
+                  <option value="accessoires">Accessoires</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Prix (en FCFA) *</label>
+                <input type="number" id="prodPrice" class="admin-input" required placeholder="Ex: 8500">
+              </div>
+
+              <div>
+                <label class="form-label">Disponibilité du stock *</label>
+                <select id="prodStock" class="admin-select">
+                  <option value="in_stock">En stock physique</option>
+                  <option value="ask">À confirmer avec la vendeuse</option>
+                  <option value="out_of_stock">Rupture temporaire</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Couleurs disponibles (séparées par une virgule)</label>
+                <input type="text" id="prodColors" class="admin-input" placeholder="Marron chocolat, Noir classique, Brun">
+              </div>
+
+              <div class="full-width">
+                <label class="form-label">URL de la photo ou Fichier local</label>
+                <input type="text" id="prodImgUrl" class="admin-input" placeholder="https://... ou collez un lien">
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">
+                  Ou importer directement une image :
+                  <input type="file" id="prodImgFile" accept="image/*" onchange="handleImageUpload(event)" style="margin-top: 4px;">
+                </div>
+              </div>
+
+              <div class="full-width">
+                <label class="form-label">Description commerciale & finitions</label>
+                <textarea id="prodDesc" class="admin-textarea" placeholder="Description du produit, finitions, coutures et compartiments..."></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+              <button type="submit" class="btn btn-caramel">Enregistrer l'article</button>
+              <button type="button" class="btn" style="background: var(--cream-card);" onclick="resetProductForm()">Annuler</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Onglet 3 : Paramètres WhatsApp & Boutique -->
+        <div id="settings-tab" class="admin-content-pane" style="display: none;">
+          <h3 style="margin-bottom: 1.25rem;">Numéros WhatsApp Officiels & Informations</h3>
+          <form onsubmit="handleSettingsSubmit(event)">
+            <div class="admin-grid-form">
+              <div>
+                <label class="form-label">Numéro WhatsApp 1 (Principal) *</label>
+                <input type="text" id="settingWhatsapp1" class="admin-input" required placeholder="237654994224">
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Ligne 1 : +237 654 99 42 24 (Commandes)</small>
+              </div>
+
+              <div>
+                <label class="form-label">Numéro WhatsApp 2 (Ligne 2) *</label>
+                <input type="text" id="settingWhatsapp2" class="admin-input" required placeholder="237687897022">
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Ligne 2 : +237 687 89 70 22 (Clientèle / Livraisons)</small>
+              </div>
+
+              <div class="full-width">
+                <label class="form-label">Lien de la page Facebook</label>
+                <input type="text" id="settingFacebook" class="admin-input" value="https://www.facebook.com/profile.php?id=100050820716280">
+              </div>
+
+              <div class="full-width">
+                <label class="form-label">Texte du bandeau d'annonce en haut du site</label>
+                <input type="text" id="settingAnnouncement" class="admin-input">
+              </div>
+
+              <div class="full-width">
+                <label class="form-label">Modalités de livraison</label>
+                <textarea id="settingDeliveryNote" class="admin-textarea"></textarea>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem;">
+              <button type="submit" class="btn btn-caramel">Enregistrer les paramètres</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-name" style="color: var(--white); margin-bottom: 0.5rem;">CARAMEL <span>BEAUTY</span></div>
+          <p>
+            Maroquinerie d'élégance, portefeuilles pour hommes et maroquinerie soignée au Cameroun.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--gold-light);">
+            « L'élégance se porte au quotidien. »
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#boutique">Catalogue complet</a></li>
+            <li><a href="#comment-commander">Modalités de commande</a></li>
+            <li><a href="#faq">Foire aux questions</a></li>
+            <li><a href="#contact">Contactez-nous</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Nos 2 Lignes WhatsApp</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:directOpenWhatsApp('237654994224', 'general')">📱 +237 654 99 42 24 (Ligne 1)</a></li>
+            <li><a href="javascript:directOpenWhatsApp('237687897022', 'general')">📱 +237 687 89 70 22 (Ligne 2)</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100050820716280" target="_blank" rel="noopener">Facebook : Caramel Beauty</a></li>
+            <li><span style="font-size: 0.82rem; color: #a49487;">Douala • Yaoundé • Tout le Cameroun</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Service Client</h4>
+          <p style="font-size: 0.85rem; color: #c4b5a8; margin-bottom: 0.8rem;">
+            Des questions sur un article ou votre livraison ? Échangez directement avec une conseillère :
+          </p>
+          <button onclick="triggerWhatsAppSelector('general')" class="btn btn-whatsapp" style="font-size: 0.85rem; padding: 0.65rem 1.1rem;">
+            Ouvrir WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 CARAMEL BEAUTY — Maroquinerie d'Élégance au Cameroun.
+        </div>
+        <div>
+          Lignes officielles WhatsApp intégrées : +237 654 99 42 24 / +237 687 89 70 22
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       LOGIQUE JAVASCRIPT FONCTIONNELLE COMPLETE
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       A. DONNÉES PAR DÉFAUT & INITIALISATION (Persistance LocalStorage)
+       ========================================================================== */
+    const STORAGE_KEY_PRODUCTS = 'caramel_beauty_products_v2';
+    const STORAGE_KEY_SETTINGS = 'caramel_beauty_settings_v2';
+
+    // Articles réels inspirés des photographies fournies (portefeuilles Baellerry noir & marron chocolat)
+    const DEFAULT_PRODUCTS = [
+      {
+        id: 'prod_1',
+        name: 'Portefeuille classique à languette Baellerry',
+        ref: 'BL-L908-MC',
+        category: 'portefeuilles-hommes',
+        price: 12000,
+        stock: 'in_stock',
+        colors: ['Marron chocolat', 'Noir classique', 'Brun cognac'],
+        img: 'wallet.avif',
+        desc: 'Adoptez un style élégant au quotidien avec ce portefeuille au design classique, à la finition soignée brillante et à la fermeture par languette sécurisée. Multiples rangements pour cartes, fentes billets et compartiment monnaie.'
+      },
+      {
+        id: 'prod_2',
+        name: 'Portefeuille Homme Noir Ébène Coutures Soignées',
+        ref: 'BL-N202-BK',
+        category: 'portefeuilles-hommes',
+        price: 10000,
+        stock: 'in_stock',
+        colors: ['Noir classique', 'Marron chocolat'],
+        img: 'ballery3.jpg',
+        desc: 'Modèle raffiné en finition noir profond avec coutures apparentes ultra précises. Fermoir à pression fiable et gabarit idéal pour vos poches sans encombrement.'
+      },
+      {
+        id: 'prod_3',
+        name: 'Porte-monnaie & Cartes Compact en Cuir Brun',
+        ref: 'CB-PM-03',
+        category: 'porte-monnaie',
+        price: 15000,
+        stock: 'in_stock',
+        colors: ['Brun chocolat', 'Noir classique'],
+        img: 'card1.jpg',
+        desc: 'L\'accessoire idéal pour emporter l\'essentiel. Format minimaliste, fermetures renforcées et cuir résistant aux frottements du quotidien.'
+      },
+      {
+         id: 'prod_4',
+        name: 'Porte-monnaie classic',
+        ref: 'CB-PM-03',
+        category: 'porte-monnaie',
+        price:8500,
+        stock: 'in_stock',
+        colors: ['Brun chocolat', 'Noir classique'],
+        img: 'ballery4.jpg',
+
+      },
+      {
+        id: 'prod_5',
+        name: 'porte passport',
+        ref: 'CB-SAC-04',
+        category: 'Porte-Passport',
+        price:7000,
+        stock: 'ask',
+        colors: ['bleu', 'Noir profond', 'rose'],
+        img: 'passport.jpg',
+        desc: 'porte passport different couleur'
+      },
+      {
+         id: 'prod_6',
+        name: 'Porte-monnaie EN prochet',
+        ref: 'CB-PM-03',
+        category: 'porte-monnaie',
+        price:13000,
+        stock: 'in_stock',
+        colors: ['Brun chocolat', 'Noir classique'],
+        img: 'prochet1.jpg',
+        desc: 'Prochet Noire et marron'
+      }
+
+    ];
+
+    // Les 2 numéros WhatsApp officiels camerounais
+    const DEFAULT_SETTINGS = {
+      whatsapp1: '237654994224', // Ligne 1 (+237 654 99 42 24)
+      whatsapp2: '237687897022', // Ligne 2 (+237 687 89 70 22)
+      facebookUrl: 'https://www.facebook.com/profile.php?id=100050820716280',
+      announcement: '✨ Nouveautés Maroquinerie : Portefeuilles Baellerry & Accessoires au Cameroun. Commandes directes WhatsApp : +237 654 99 42 24 / +237 687 89 70 22 !',
+      deliveryNote: 'Livraison disponible à Yaoundé, Douala et expédition par agence sécurisée dans toutes les régions du Cameroun.'
+    };
+
+    let products = JSON.parse(localStorage.getItem(STORAGE_KEY_PRODUCTS)) || DEFAULT_PRODUCTS;
+    let settings = JSON.parse(localStorage.getItem(STORAGE_KEY_SETTINGS)) || DEFAULT_SETTINGS;
+    let cart = [];
+    let currentFilter = 'all';
+    let currentModalProduct = null;
+    let selectedModalColor = '';
+
+    // Gestion du message en attente pour le sélecteur WhatsApp
+    let pendingWhatsAppMessage = '';
+
+    /* ==========================================================================
+       B. GESTION DES FORMATS ET COULEURS
+       ========================================================================== */
+    function formatFCFA(amount) {
+      return new Intl.NumberFormat('fr-FR').format(amount) + ' FCFA';
+    }
+
+    function getColorClass(colorName) {
+      const lower = colorName.toLowerCase();
+      if (lower.includes('noir')) return 'swatch-noir';
+      if (lower.includes('chocolat')) return 'swatch-chocolat';
+      if (lower.includes('brun') || lower.includes('cognac')) return 'swatch-brun';
+      if (lower.includes('caramel')) return 'swatch-caramel';
+      if (lower.includes('crème') || lower.includes('creme') || lower.includes('ivoire')) return 'swatch-creme';
+      return 'swatch-chocolat';
+    }
+
+    /* ==========================================================================
+       C. RENDU DU CATALOGUE PRODUITS
+       ========================================================================== */
+    function renderProducts(itemsToRender = null) {
+      const container = document.getElementById('productsGrid');
+      let items = itemsToRender || products;
+
+      if (!itemsToRender && currentFilter !== 'all') {
+        items = items.filter(p => p.category === currentFilter);
+      }
+
+      if (items.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 3rem; background: var(--white); border-radius: var(--radius-md);">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📦</div>
+            <h3 style="color: var(--primary-chocolate);">Aucun article trouvé</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Essayez un autre mot-clé ou réinitialisez le filtre de catégorie.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = items.map(product => {
+        let stockLabel = 'En stock';
+        let stockClass = 'stock-in';
+        if (product.stock === 'out_of_stock') {
+          stockLabel = 'Rupture temporaire';
+          stockClass = 'stock-out';
+        } else if (product.stock === 'ask') {
+          stockLabel = 'Disponibilité à vérifier';
+          stockClass = 'stock-ask';
+        }
+
+        const swatchesHtml = product.colors.map(c => 
+          `<span class="swatch ${getColorClass(c)}" title="${c}"></span>`
+        ).join('');
+
+        return `
+          <div class="product-card" data-id="${product.id}">
+            <div class="product-badge-flag">${product.category.replace('-', ' ').toUpperCase()}</div>
+            <div class="product-thumb-container" onclick="openProductModal('${product.id}')" style="cursor: pointer;">
+              <img src="${product.img}" alt="${product.name}" class="product-img" loading="lazy">
+            </div>
+            <div class="product-content">
+              <span class="product-category-tag">${product.colors.join(' • ')}</span>
+              <h3 class="product-title" onclick="openProductModal('${product.id}')" style="cursor: pointer;">${product.name}</h3>
+              <div class="product-brand-ref">Réf: ${product.ref || 'CB-STANDARD'}</div>
+              
+              <div class="color-swatches">
+                ${swatchesHtml}
+              </div>
+
+              <div class="product-price-row">
+                <div>
+                  <span class="price-val">${formatFCFA(product.price)}</span>
+                </div>
+                <span class="stock-indicator ${stockClass}">● ${stockLabel}</span>
+              </div>
+
+              <div class="product-action-btns">
+                <button class="btn-detail" onclick="openProductModal('${product.id}')">Voir le produit</button>
+                <button class="btn-card-order" onclick="openProductModal('${product.id}', true)">Commander</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* ==========================================================================
+       D. RECHERCHE, FILTRES & TRI
+       ========================================================================== */
+    function filterByCategory(cat) {
+      currentFilter = cat;
+      const pills = document.querySelectorAll('.pill-btn');
+      pills.forEach(btn => {
+        if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(cat)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      renderProducts();
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      let filtered = products;
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(p => p.category === currentFilter);
+      }
+      if (q) {
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(q) || 
+          p.ref.toLowerCase().includes(q) ||
+          p.colors.some(c => c.toLowerCase().includes(q))
+        );
+      }
+      renderProducts(filtered);
+    }
+
+    function handleSort() {
+      const criteria = document.getElementById('sortSelect').value;
+      let sorted = [...products];
+      if (currentFilter !== 'all') {
+        sorted = sorted.filter(p => p.category === currentFilter);
+      }
+
+      if (criteria === 'price-asc') sorted.sort((a,b) => a.price - b.price);
+      if (criteria === 'price-desc') sorted.sort((a,b) => b.price - a.price);
+      if (criteria === 'name') sorted.sort((a,b) => a.name.localeCompare(b.name));
+
+      renderProducts(sorted);
+    }
+
+    /* ==========================================================================
+       E. MODALE PRODUIT & GESTION DES VARIANTES
+       ========================================================================== */
+    function openProductModal(productId, autoFocusOrder = false) {
+      const p = products.find(x => x.id === productId);
+      if (!p) return;
+      currentModalProduct = p;
+      selectedModalColor = p.colors[0] || 'Standard';
+
+      document.getElementById('modalImg').src = p.img;
+      document.getElementById('modalTitle').innerText = p.name;
+      document.getElementById('modalCategory').innerText = p.category.replace('-', ' ');
+      document.getElementById('modalRef').innerText = 'Référence : ' + (p.ref || 'Non renseignée');
+      document.getElementById('modalPrice').innerText = formatFCFA(p.price);
+      document.getElementById('modalDesc').innerText = p.desc;
+      document.getElementById('modalQtyInput').value = '1';
+
+      // Affichage des pastilles / boutons de couleur
+      const colorsContainer = document.getElementById('modalColorOptions');
+      colorsContainer.innerHTML = p.colors.map((c, i) => `
+        <button type="button" class="color-option-btn ${i === 0 ? 'selected' : ''}" onclick="selectModalColor('${c}', this)">
+          ${c}
+        </button>
+      `).join('');
+
+      document.getElementById('productModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+
+      if (autoFocusOrder) {
+        document.getElementById('clientCity').focus();
+      }
+    }
+
+    function selectModalColor(color, btn) {
+      selectedModalColor = color;
+      document.querySelectorAll('.color-option-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+    }
+
+    function adjustModalQty(delta) {
+      const input = document.getElementById('modalQtyInput');
+      let val = parseInt(input.value) || 1;
+      val += delta;
+      if (val < 1) val = 1;
+      input.value = val;
+    }
+
+    function closeProductModal() {
+      document.getElementById('productModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+      currentModalProduct = null;
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'productModal') {
+        closeProductModal();
+      }
+    }
+
+    /* ==========================================================================
+       F. GESTION DU DOUBLE WHATSAPP & SÉLECTEUR DE CONSEILLER
+       ========================================================================== */
+    function openWaPickerModal(message) {
+      pendingWhatsAppMessage = message;
+      document.getElementById('waPickerModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeWaPickerModal() {
+      document.getElementById('waPickerModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeWaPickerOnBackdrop(e) {
+      if (e.target.id === 'waPickerModal') {
+        closeWaPickerModal();
+      }
+    }
+
+    function confirmWaLineSelected(phoneNumber) {
+      closeWaPickerModal();
+      const cleanNum = phoneNumber.replace(/[^0-9]/g, '');
+      const url = `https://wa.me/${cleanNum}?text=${encodeURIComponent(pendingWhatsAppMessage)}`;
+      window.open(url, '_blank');
+    }
+
+    function directOpenWhatsApp(phoneNumber, type = 'general') {
+      let message = '';
+      if (type === 'general') {
+        message = "Bonjour CARAMEL BEAUTY ! Je découvre votre boutique en ligne et je souhaiterais avoir des informations sur vos portefeuilles, sacs et accessoires disponibles.";
+      }
+      const cleanNum = phoneNumber.replace(/[^0-9]/g, '');
+      const url = `https://wa.me/${cleanNum}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+
+    // Déclencheur général (Header / Bouton flottant / Hero)
+    function triggerWhatsAppSelector(type = 'general') {
+      let message = "Bonjour CARAMEL BEAUTY ! Je découvre votre boutique en ligne et je souhaiterais avoir des informations sur vos portefeuilles, sacs et accessoires disponibles.";
+      openWaPickerModal(message);
+    }
+
+    // Déclencheur Commande Fiche Produit
+    function orderCurrentModalProductTrigger() {
+      if (!currentModalProduct) return;
+
+      const qty = document.getElementById('modalQtyInput').value;
+      const city = document.getElementById('clientCity').value.trim();
+      const quarter = document.getElementById('clientQuarter').value.trim();
+
+      let locationText = '';
+      if (city || quarter) {
+        locationText = `\n📍 Destination souhaitée au Cameroun : ${city || 'Non spécifiée'}${quarter ? ', Quartier: ' + quarter : ''}`;
+      }
+
+      const message = `Bonjour CARAMEL BEAUTY ! Je souhaite commander le produit suivant :
+
+• Article : ${currentModalProduct.name}
+• Référence : ${currentModalProduct.ref || 'CB-STANDARD'}
+• Couleur : ${selectedModalColor}
+• Quantité : ${qty}
+• Prix affiché : ${formatFCFA(currentModalProduct.price)}${locationText}
+
+Merci de me confirmer la disponibilité du stock et les modalités de livraison.`;
+
+      openWaPickerModal(message);
+    }
+
+    function shareCurrentProduct() {
+      if (navigator.share && currentModalProduct) {
+        navigator.share({
+          title: currentModalProduct.name,
+          text: `Découvrez cet article chez CARAMEL BEAUTY : ${currentModalProduct.name}`,
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        document.execCommand('copy');
+        alert("Lien copié dans le presse-papier !");
+      }
+    }
+
+    /* ==========================================================================
+       G. GESTION DU PANIER MULTI-ARTICLES
+       ========================================================================== */
+    function addModalProductToCart() {
+      if (!currentModalProduct) return;
+      const qty = parseInt(document.getElementById('modalQtyInput').value) || 1;
+      
+      const item = {
+        id: currentModalProduct.id + '_' + selectedModalColor,
+        productId: currentModalProduct.id,
+        name: currentModalProduct.name,
+        price: currentModalProduct.price,
+        color: selectedModalColor,
+        img: currentModalProduct.img,
+        qty: qty
+      };
+
+      const existingIndex = cart.findIndex(x => x.id === item.id);
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += qty;
+      } else {
+        cart.push(item);
+      }
+
+      updateCartUI();
+      closeProductModal();
+      openCartDrawer();
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cartCount');
+      const totalCount = cart.reduce((acc, x) => acc + x.qty, 0);
+      badge.innerText = totalCount;
+
+      const container = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        container.innerHTML = `<p style="text-align: center; color: var(--text-muted); padding: 2rem;">Votre sélection est vide.</p>`;
+        document.getElementById('cartTotalSum').innerText = '0 FCFA';
+        return;
+      }
+
+      let sum = 0;
+      container.innerHTML = cart.map((item, index) => {
+        sum += item.price * item.qty;
+        return `
+          <div class="cart-item">
+            <img src="${item.img}" class="cart-item-img" alt="${item.name}">
+            <div class="cart-item-info">
+              <div class="cart-item-title">${item.name}</div>
+              <div class="cart-item-variant">Couleur: ${item.color} | Qté: ${item.qty}</div>
+              <div class="cart-item-price">${formatFCFA(item.price * item.qty)}</div>
+            </div>
+            <button class="cart-item-remove" onclick="removeCartItem(${index})" title="Supprimer">✕</button>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('cartTotalSum').innerText = formatFCFA(sum);
+    }
+
+    function removeCartItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function openCartDrawer() {
+      document.getElementById('cartDrawer').classList.add('open');
+      document.getElementById('cartBackdrop').classList.add('show');
+    }
+
+    function closeCartDrawer() {
+      document.getElementById('cartDrawer').classList.remove('open');
+      document.getElementById('cartBackdrop').classList.remove('show');
+    }
+
+    function sendCartOrderTrigger() {
+      if (cart.length === 0) {
+        alert("Votre sélection est vide.");
+        return;
+      }
+
+      const city = document.getElementById('cartClientCity').value.trim();
+      const quarter = document.getElementById('cartClientQuarter').value.trim();
+      let locationText = '';
+      if (city || quarter) {
+        locationText = `\n📍 Destination de livraison : ${city || 'Non spécifiée'}${quarter ? ', ' + quarter : ''}`;
+      }
+
+      let total = 0;
+      let itemsListText = cart.map((it, idx) => {
+        const lineTotal = it.price * it.qty;
+        total += lineTotal;
+        return `${idx + 1}. ${it.name} (${it.color}) — Qté: ${it.qty} = ${formatFCFA(lineTotal)}`;
+      }).join('\n');
+
+      const message = `Bonjour CARAMEL BEAUTY ! Je souhaite commander la sélection d'articles suivante :\n\n${itemsListText}\n\n💰 Sous-total estimé : ${formatFCFA(total)}${locationText}\n\nMerci de m'indiquer la disponibilité et les modalités d'expédition au Cameroun.`;
+
+      closeCartDrawer();
+      openWaPickerModal(message);
+    }
+
+    /* ==========================================================================
+       H. GESTION DU TABLEAU DE BORD (ADMIN)
+       ========================================================================== */
+    function toggleAdminSection() {
+      const panel = document.getElementById('adminPanel');
+      if (panel.style.display === 'none' || panel.style.display === '') {
+        const pass = prompt("Saisissez le mot de passe administrateur CARAMEL BEAUTY");
+        if (pass === 'caramel2026' || pass === 'admin') {
+          panel.style.display = 'block';
+          panel.scrollIntoView({ behavior: 'smooth' });
+          renderAdminTable();
+          loadSettingsIntoForm();
+        } else if (pass !== null) {
+          alert("Mot de passe incorrect.");
+        }
+      } else {
+        panel.style.display = 'none';
+      }
+    }
+
+    function switchAdminTab(tabId) {
+      document.querySelectorAll('.admin-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.admin-content-pane').forEach(p => p.style.display = 'none');
+
+      document.getElementById(tabId).style.display = 'block';
+      event.target.classList.add('active');
+    }
+
+    function renderAdminTable() {
+      document.getElementById('adminTotalProducts').innerText = products.length;
+      const tbody = document.getElementById('adminProductsTableBody');
+
+      tbody.innerHTML = products.map(p => `
+        <tr>
+          <td><img src="${p.img}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 4px;"></td>
+          <td>
+            <strong>${p.name}</strong><br>
+            <small style="color: var(--text-muted);">Réf: ${p.ref || 'N/A'}</small>
+          </td>
+          <td>${p.category}</td>
+          <td><strong>${formatFCFA(p.price)}</strong></td>
+          <td>${p.stock}</td>
+          <td>
+            <button onclick="editProduct('${p.id}')" style="background: none; color: var(--caramel-accent); font-weight:600; cursor:pointer; margin-right:8px;">Modifier</button>
+            <button onclick="deleteProduct('${p.id}')" style="background: none; color: var(--danger); font-weight:600; cursor:pointer;">Supprimer</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function handleImageUpload(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          document.getElementById('prodImgUrl').value = evt.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function handleProductSubmit(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editProductId').value;
+      const name = document.getElementById('prodName').value.trim();
+      const ref = document.getElementById('prodRef').value.trim();
+      const category = document.getElementById('prodCategory').value;
+      const price = parseFloat(document.getElementById('prodPrice').value) || 0;
+      const stock = document.getElementById('prodStock').value;
+      const colorsStr = document.getElementById('prodColors').value;
+      const img = document.getElementById('prodImgUrl').value.trim() || 'https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=700&q=80';
+      const desc = document.getElementById('prodDesc').value.trim();
+
+      const colors = colorsStr ? colorsStr.split(',').map(s => s.trim()).filter(Boolean) : ['Marron chocolat', 'Noir classique'];
+
+      if (editId) {
+        const idx = products.findIndex(p => p.id === editId);
+        if (idx > -1) {
+          products[idx] = { id: editId, name, ref, category, price, stock, colors, img, desc };
+        }
+      } else {
+        const newProd = {
+          id: 'prod_' + Date.now(),
+          name, ref, category, price, stock, colors, img, desc
+        };
+        products.unshift(newProd);
+      }
+
+      localStorage.setItem(STORAGE_KEY_PRODUCTS, JSON.stringify(products));
+      renderProducts();
+      renderAdminTable();
+      resetProductForm();
+      switchAdminTab('products-tab');
+      alert("Article enregistré avec succès dans le catalogue !");
+    }
+
+    function editProduct(id) {
+      const p = products.find(x => x.id === id);
+      if (!p) return;
+      document.getElementById('editProductId').value = p.id;
+      document.getElementById('prodName').value = p.name;
+      document.getElementById('prodRef').value = p.ref || '';
+      document.getElementById('prodCategory').value = p.category;
+      document.getElementById('prodPrice').value = p.price;
+      document.getElementById('prodStock').value = p.stock;
+      document.getElementById('prodColors').value = p.colors.join(', ');
+      document.getElementById('prodImgUrl').value = p.img;
+      document.getElementById('prodDesc').value = p.desc;
+      document.getElementById('formProductTitle').innerText = "Modifier l'article : " + p.name;
+
+      switchAdminTab('new-product-tab');
+    }
+
+    function deleteProduct(id) {
+      const proceed = window.confirm("Confirmez-vous la suppression de cet article ?");
+      if (proceed) {
+        products = products.filter(p => p.id !== id);
+        localStorage.setItem(STORAGE_KEY_PRODUCTS, JSON.stringify(products));
+        renderProducts();
+        renderAdminTable();
+      }
+    }
+
+    function resetProductForm() {
+      document.getElementById('productForm').reset();
+      document.getElementById('editProductId').value = '';
+      document.getElementById('formProductTitle').innerText = "Ajouter un nouvel article au catalogue";
+    }
+
+    function loadSettingsIntoForm() {
+      document.getElementById('settingWhatsapp1').value = settings.whatsapp1 || '237654994224';
+      document.getElementById('settingWhatsapp2').value = settings.whatsapp2 || '237687897022';
+      document.getElementById('settingFacebook').value = settings.facebookUrl || '';
+      document.getElementById('settingAnnouncement').value = settings.announcement || '';
+      document.getElementById('settingDeliveryNote').value = settings.deliveryNote || '';
+    }
+
+    function handleSettingsSubmit(e) {
+      e.preventDefault();
+      settings.whatsapp1 = document.getElementById('settingWhatsapp1').value.trim();
+      settings.whatsapp2 = document.getElementById('settingWhatsapp2').value.trim();
+      settings.facebookUrl = document.getElementById('settingFacebook').value.trim();
+      settings.announcement = document.getElementById('settingAnnouncement').value.trim();
+      settings.deliveryNote = document.getElementById('settingDeliveryNote').value.trim();
+
+      localStorage.setItem(STORAGE_KEY_SETTINGS, JSON.stringify(settings));
+      document.getElementById('topAnnouncement').innerText = settings.announcement;
+      alert("Paramètres enregistrés avec succès !");
+    }
+
+    /* ==========================================================================
+       I. UTILITAIRES INTERFACE (FAQ & MENU MOBILE)
+       ========================================================================== */
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+      const span = btn.querySelector('span');
+      span.innerText = item.classList.contains('active') ? '−' : '+';
+    }
+
+    function toggleMobileNav() {
+      document.getElementById('mainNav').classList.toggle('active');
+    }
+
+    // Initialisation au chargement de la page
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      document.getElementById('topAnnouncement').innerText = settings.announcement;
+    });
+  </script>
+</body>
+</html>
